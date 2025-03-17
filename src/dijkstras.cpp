@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 #include <limits>
-#include "dijktras.h"
+#include "dijkstras.h"
 using namespace std;
 
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous){
