@@ -6,6 +6,7 @@
 #include <set>
 #include <cmath>
 #include "ladder.h"
+using namespace std;
 
 void error(string word1, string word2, string msg){
     cerr << "Error: " << msg << word1 << " " << word2 << endl;
@@ -51,7 +52,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         vector<string> ladder = ladder_queue.front();
         ladder_queue.pop();
         string last_word = ladder.back();
-        for (string word : word_list) {
+        for (const string& word : word_list) {
             if (is_adjacent(last_word, word) && visited.find(word) == visited.end()) {
                 visited.insert(word);
                 vector<string> new_ladder = ladder;
